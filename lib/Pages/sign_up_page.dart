@@ -13,10 +13,10 @@ class SignUpPage extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.symmetric(vertical: 150.0),
             child: Column(
-              //mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Text(
-                  'Login',
+                  'Sign Up',
                   style: TextStyle(
                     fontSize: 30.0,
                     fontWeight: FontWeight.bold,
@@ -66,7 +66,7 @@ class SignUpPage extends StatelessWidget {
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(primary: Colors.lightGreen),
                   child: Text(
-                    'Login',
+                    'Sign Up',
                     style: TextStyle(
                       fontSize: 20.0,
                       fontWeight: FontWeight.bold,
@@ -77,20 +77,7 @@ class SignUpPage extends StatelessWidget {
                     Navigator.pushNamed(context, '/home');
                   },
                 ),
-                TextButton(
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/register');
-                  },
-                  child: Text(
-                    'Have no account? Register here',
-                    style: TextStyle(
-                      fontSize: 20.0,
-                      fontWeight: FontWeight.normal,
-                      color: Colors.white,
-                      fontStyle: FontStyle.italic,
-                    ),
-                  ),
-                ),
+
               ],
             ),
           ),
