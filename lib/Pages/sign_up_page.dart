@@ -11,9 +11,9 @@ class SignUpPage extends StatelessWidget {
       body: SafeArea(
         child: Center(
           child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 150.0),
+            padding: const EdgeInsets.symmetric(vertical: 120.0),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+              //mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Text(
                   'Sign Up',
@@ -43,6 +43,25 @@ class SignUpPage extends StatelessWidget {
                         color: Colors.white,
                       ),
                     ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(15.0),
+                  child: TextField(
+                    decoration: InputDecoration(
+                      hintText: 'Username',
+                      hintStyle: TextStyle(
+                        color: Colors.white,
+                      ),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(20.0),
+                      ),
+                      prefixIcon: Icon(
+                        Icons.person,
+                        color: Colors.white,
+                      ),
+
+                    )
                   ),
                 ),
                 Padding(

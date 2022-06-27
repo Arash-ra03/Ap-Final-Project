@@ -27,50 +27,40 @@ class LoginPage extends StatelessWidget {
                 ),
                 Padding(
                   padding: const EdgeInsets.all(15.0),
-                  child: Material(
-                    shadowColor:Colors.black,
-                    elevation: 10.0,
-                    borderRadius: BorderRadius.circular(10.0),
-                    child: TextField(
-                      decoration: InputDecoration(
-                        filled: true,
-                        fillColor: Colors.cyan[100],
-                        hintText: 'Enter your email',
-                        hintStyle: TextStyle(
-                          color: Colors.blue[900],
-                        ),
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(10.0),
-                        ),
-                        prefixIcon: Icon(
-                          Icons.email,
-                          color: Colors.white,
-                        ),
+                  child: TextField(
+                    decoration: InputDecoration(
+                      filled: false,
+                      fillColor: Colors.cyan[100],
+                      hintText: 'Enter your email',
+                      hintStyle: TextStyle(
+                        color: Colors.white,
+                      ),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),
+                      prefixIcon: Icon(
+                        Icons.email,
+                        color: Colors.white,
                       ),
                     ),
                   ),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(15.0),
-                  child: Material(
-                    shadowColor:Colors.black,
-                    elevation: 10.0,
-                    borderRadius: BorderRadius.circular(10.0),
-                    child: TextField(
-                      decoration: InputDecoration(
-                        filled: true,
-                        fillColor: Colors.cyan[100],
-                        hintText: 'Enter your password',
-                        hintStyle: TextStyle(
-                          color: Colors.blue[900],
-                        ),
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(10.0),
-                        ),
-                        prefixIcon: Icon(
-                          Icons.lock,
-                          color: Colors.white,
-                        ),
+                  child: TextField(
+                    decoration: InputDecoration(
+                      filled: false,
+                      fillColor: Colors.cyan[100],
+                      hintText: 'Enter your password',
+                      hintStyle: TextStyle(
+                        color: Colors.white,
+                      ),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),
+                      prefixIcon: Icon(
+                        Icons.lock,
+                        color: Colors.white,
                       ),
                     ),
                   ),
