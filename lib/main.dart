@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'Pages/login_page.dart';
+import 'Pages/make_post_page.dart';
 import 'Pages/sign_up_page.dart';
 
 void main() {
@@ -16,6 +17,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/login': (context) => LoginPage(),
         '/signup': (context) => SignUpPage(),
+        '/makepost': (context) => MakePost(),
       },
     );
   }
