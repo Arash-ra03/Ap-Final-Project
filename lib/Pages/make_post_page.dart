@@ -48,14 +48,14 @@ class _MakePostState extends State<MakePost> {
               child: Row(
                 children: <Widget>[
                   DropdownButton<String>(
-                    dropdownColor: Colors.black,
+                    dropdownColor: Colors.blueGrey[900],
                     value: dropdownValue,
                     icon: const Icon(Icons.arrow_drop_down),
                     elevation: 16,
                     style: const TextStyle(color: Colors.white),
                     underline: Container(
                       height: 2,
-                      color: Colors.deepPurpleAccent,
+                      color: Colors.blueGrey[600],
                     ),
                     onChanged: (String? newValue) {
                       setState(() {
@@ -73,50 +73,58 @@ class _MakePostState extends State<MakePost> {
                 ],
               ),
             ),
-            TextField(
-              style: TextStyle(
-                color: Colors.white,
-              ),
-              decoration: InputDecoration(
-                hintText: 'Add a Title',
-                hintStyle: TextStyle(
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: TextField(
+                style: TextStyle(
                   color: Colors.white,
                 ),
-                focusedBorder: OutlineInputBorder(
-                  borderSide: BorderSide(
+                decoration: InputDecoration(
+                  hintText: 'Add a Title',
+                  hintStyle: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                      color: Colors.white,
+                    ),
+                  ),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10.0),
+                  ),
+                  prefixIcon: Icon(
+                    Icons.title,
                     color: Colors.white,
                   ),
-                ),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(10.0),
-                ),
-                prefixIcon: Icon(
-                  Icons.title,
-                  color: Colors.white,
                 ),
               ),
             ),
-            TextField(
-              maxLines: 8,
-              style: TextStyle(
-                color: Colors.white,
-              ),
-              decoration: InputDecoration(
-                hintText: 'Add a Description',
-                hintStyle: TextStyle(
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: TextField(
+                maxLines: 8,
+                style: TextStyle(
                   color: Colors.white,
                 ),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(10.0),
-                ),
-                focusedBorder: OutlineInputBorder(
-                  borderSide: BorderSide(
+                decoration: InputDecoration(
+                  hintText: 'Add a Description',
+                  hintStyle: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                  ),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10.0),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                      color: Colors.white,
+                    ),
+                  ),
+                  prefixIcon: Icon(
+                    Icons.description,
                     color: Colors.white,
                   ),
-                ),
-                prefixIcon: Icon(
-                  Icons.description,
-                  color: Colors.white,
                 ),
               ),
             ),
