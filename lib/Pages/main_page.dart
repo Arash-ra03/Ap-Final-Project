@@ -23,10 +23,12 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      /*
       appBar: AppBar(
         title: Text('Bottom Navigation Bar'),
         centerTitle: true,
       ),
+       */
       body: screens[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
@@ -43,11 +45,11 @@ class _MainPageState extends State<MainPage> {
         items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            label: 'Home',
+            label: 'Feed',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.search),
-            label: 'Feed',
+            label: 'Communities',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.add),
