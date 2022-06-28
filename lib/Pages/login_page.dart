@@ -84,7 +84,7 @@ class LoginPage extends StatelessWidget {
                     Navigator.pushNamed(context, '/signup');
                   },
                   child: Text(
-                    'Have no account? Register here',
+                    'Have no account? SignUp here',
                     style: TextStyle(
                       fontSize: 20.0,
                       fontWeight: FontWeight.normal,
