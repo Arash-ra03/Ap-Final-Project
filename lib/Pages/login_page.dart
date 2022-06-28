@@ -76,7 +76,7 @@ class LoginPage extends StatelessWidget {
                     ),
                   ),
                   onPressed: () {
-                    Navigator.pushNamed(context, '/makepost');
+                    Navigator.pushNamed(context, '/mainpage');
                   },
                 ),
                 TextButton(
