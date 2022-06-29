@@ -14,7 +14,7 @@ class _MakePostState extends State<MakePost> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.blueGrey,
+        backgroundColor: Colors.black,
         body: SafeArea(
           child: Column(children: <Widget>[
             Row(
@@ -80,18 +80,25 @@ class _MakePostState extends State<MakePost> {
                   color: Colors.white,
                 ),
                 decoration: InputDecoration(
+
                   hintText: 'Add a Title',
                   hintStyle: TextStyle(
-                    color: Colors.white,
+                    color: Colors.grey,
                     fontWeight: FontWeight.bold,
                   ),
                   focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(5.0),
                     borderSide: BorderSide(
                       color: Colors.white,
+                      width: 3,
                     ),
                   ),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10.0),
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(5.0),
+                    borderSide: BorderSide(
+                      color: Colors.blueGrey,
+                      width: 3,
+                    )
                   ),
                   prefixIcon: Icon(
                     Icons.title,
@@ -110,15 +117,21 @@ class _MakePostState extends State<MakePost> {
                 decoration: InputDecoration(
                   hintText: 'Add a Description',
                   hintStyle: TextStyle(
-                    color: Colors.white,
+                    color: Colors.grey,
                     fontWeight: FontWeight.bold,
                   ),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10.0),
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(5.0),
+                    borderSide: BorderSide(
+                      color: Colors.blueGrey,
+                      width: 3,
+                    ),
                   ),
                   focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(5.0),
                     borderSide: BorderSide(
                       color: Colors.white,
+                      width: 3,
                     ),
                   ),
                   prefixIcon: Icon(
