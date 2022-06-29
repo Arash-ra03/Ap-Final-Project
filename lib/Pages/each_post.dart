@@ -18,7 +18,7 @@ class MyPost extends StatelessWidget {
             borderRadius: BorderRadius.circular(10),
             color: Colors.blueGrey[800],
             boxShadow: [
-              BoxShadow(color: Colors.blueGrey, spreadRadius: 5),
+              BoxShadow(color: Colors.blueGrey, spreadRadius: 2),
             ],
           ),
           child: Column(
