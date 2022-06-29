@@ -1,3 +1,4 @@
+import 'package:ap_final_project/Pages/feed_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -13,8 +14,8 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   int _currentIndex = 0;
   final screens = [
-    Center(child: Text('Home', style: TextStyle(fontSize: 60),),),
-    Center(child: Text('Feed', style: TextStyle(fontSize: 60),),),
+    FeedPage(),
+    Center(child: Text('Communities', style: TextStyle(fontSize: 60),),),
     MakePost(),
     Center(child: Text('Comments', style: TextStyle(fontSize: 60),),),
     Center(child: Text('Settings', style: TextStyle(fontSize: 60),),),

@@ -1,3 +1,4 @@
+import 'package:ap_final_project/Pages/feed_page.dart';
 import 'package:ap_final_project/Pages/main_page.dart';
 import 'package:flutter/material.dart';
 
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
         '/signup': (context) => SignUpPage(),
         '/makepost': (context) => MakePost(),
         '/mainpage': (context) => MainPage(),
+        '/feedpage': (context) => FeedPage(),
       },
     );
   }
