@@ -9,13 +9,30 @@ class MyPost extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 8.0),
-      child: Container(height: 400,
-        color: Colors.blue,
-        child: Center(
-            child: Text(
-              child,
-              style: TextStyle(fontSize: 40),
-            ),
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Container(height: 300,
+          color: Colors.blue,
+          child: Column(
+            children: [
+              Row(
+mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'User Name',
+                    style: TextStyle(
+                      fontSize: 20.0,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                  ),
+
+                ],
+              ),
+
+
+            ],
+          ),
         ),
       ),
     );
