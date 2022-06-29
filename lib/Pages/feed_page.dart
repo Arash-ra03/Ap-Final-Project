@@ -12,6 +12,7 @@ class FeedPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       body: ListView.builder(
         itemCount: _posts.length,
         itemBuilder: (context, index){

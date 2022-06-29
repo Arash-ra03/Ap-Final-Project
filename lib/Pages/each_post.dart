@@ -11,26 +11,40 @@ class MyPost extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 8.0),
       child: Padding(
         padding: const EdgeInsets.all(8.0),
-        child: Container(height: 300,
-          color: Colors.blue,
+        child: Container(
+
+          height: 300,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10),
+            color: Colors.blueGrey[800],
+            boxShadow: [
+              BoxShadow(color: Colors.blueGrey, spreadRadius: 5),
+            ],
+          ),
           child: Column(
             children: [
-              Row(
-mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    'User Name',
-                    style: TextStyle(
-                      fontSize: 20.0,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    CircleAvatar(
+                      radius: 20.0,
                     ),
-                  ),
-
-                ],
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Text(
+                      'User Name',
+                      style: TextStyle(
+                        fontSize: 20.0,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ],
+                ),
               ),
-
-
             ],
           ),
         ),
