@@ -37,6 +37,7 @@ class _MainPageState extends State<MainPage> {
         selectedItemColor: Colors.lightGreen,
         unselectedItemColor: Colors.white,
         showUnselectedLabels: false,
+        showSelectedLabels: false,
         currentIndex: _currentIndex,
         onTap: (int index) {
           setState(() {
