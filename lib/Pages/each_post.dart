@@ -37,14 +37,64 @@ class MyPost extends StatelessWidget {
                     Text(
                       'User Name',
                       style: TextStyle(
-                        fontSize: 20.0,
+                        fontSize: 15.0,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
+
                       ),
                     ),
                   ],
                 ),
               ),
+              Row(
+                children: [
+                  SizedBox(
+                    width: 65,
+                  ),
+                  Text(
+                    'Community Name',
+                    style: TextStyle(
+                      fontSize: 12.0,
+                      color: Colors.white,
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: SizedBox(
+                  width: double.infinity,
+                  height: 150,
+                  child: Text(
+                    'Title',
+                    style: TextStyle(
+                      fontSize: 18.0,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ),
+
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  children: [
+                    Icon(Icons.arrow_upward),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Icon(Icons.arrow_downward),
+                    SizedBox(
+                      width: 10,
+                    ),
+                  ],
+                ),
+              )
+
             ],
           ),
         ),
