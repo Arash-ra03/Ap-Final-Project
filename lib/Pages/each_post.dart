@@ -82,6 +82,7 @@ class MyPost extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Icon(Icons.arrow_upward),
                     SizedBox(
@@ -91,6 +92,7 @@ class MyPost extends StatelessWidget {
                     SizedBox(
                       width: 10,
                     ),
+                    Icon(Icons.messenger_outline),
                   ],
                 ),
               )
