@@ -7,16 +7,16 @@ class CommunityPageSearch extends SearchDelegate {
     final ThemeData theme = Theme.of(context);
     final ColorScheme colorScheme = theme.colorScheme;
     assert(theme != null);
-    return theme.copyWith(
-      appBarTheme: AppBarTheme(
-        brightness: colorScheme.brightness,
-        backgroundColor: Colors.black,
-        iconTheme: theme.primaryIconTheme.copyWith(color: Colors.grey),
-        textTheme: theme.textTheme,
 
+    return theme.copyWith(
+      backgroundColor: Colors.black,
+      appBarTheme: AppBarTheme(
+        backgroundColor: Colors.grey,
+        iconTheme: theme.primaryIconTheme.copyWith(color: Colors.white),
       ),
       inputDecorationTheme: searchFieldDecorationTheme ??
           InputDecorationTheme(
+            fillColor: Colors.grey,
             hintStyle: searchFieldStyle ?? theme.inputDecorationTheme.hintStyle,
             border: InputBorder.none,
           ),
@@ -59,6 +59,7 @@ class CommunityPageSearch extends SearchDelegate {
       itemBuilder: (context, index) {
         var result = matchQuery[index];
         return ListTile(
+
           title: Text(
             result,
             style: TextStyle(
@@ -138,7 +139,7 @@ class CommunityPageSearch extends SearchDelegate {
     );
   }
 
-  @override
+  /*@override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
@@ -180,7 +181,7 @@ class CommunityPageSearch extends SearchDelegate {
         ),
       ),
     );
-  }
+  }*/
 }
 
 class CommunityPage extends StatefulWidget {
@@ -198,6 +199,7 @@ class _CommunityPageState extends State<CommunityPage> {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
+        title: Text('Community'),
         automaticallyImplyLeading: false,
         backgroundColor: Colors.black,
         actions: [
