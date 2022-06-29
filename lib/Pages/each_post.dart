@@ -39,7 +39,7 @@ class MyPost extends StatelessWidget {
                       style: TextStyle(
                         fontSize: 15.0,
                         fontWeight: FontWeight.bold,
-                        color: Colors.white,
+                        color: Colors.grey,
 
                       ),
                     ),
@@ -55,7 +55,7 @@ class MyPost extends StatelessWidget {
                     'Community Name',
                     style: TextStyle(
                       fontSize: 12.0,
-                      color: Colors.white,
+                      color: Colors.grey,
                     ),
                   ),
                 ],
