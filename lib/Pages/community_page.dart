@@ -5,7 +5,6 @@ class CommunityPageSearch extends SearchDelegate {
   ThemeData appBarTheme(BuildContext context) {
     assert(context != null);
     final ThemeData theme = Theme.of(context);
-    final ColorScheme colorScheme = theme.colorScheme;
     assert(theme != null);
 
     return theme.copyWith(
