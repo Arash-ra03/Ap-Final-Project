@@ -1,3 +1,4 @@
+import 'package:ap_final_project/Pages/each_post.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -7,13 +8,18 @@ class PostDetail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.grey[800],
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(40),
         child: AppBar(
           backgroundColor: Colors.grey[900],
 
         ),
+      ),
+      body: Column(
+        children: [
+          MyPost(child: "child"),
+        ]
       ),
       bottomSheet: Container(
         color: Colors.black87,
