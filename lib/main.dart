@@ -6,6 +6,7 @@ import 'Pages/community_detail_page.dart';
 import 'Pages/community_page.dart';
 import 'Pages/login_page.dart';
 import 'Pages/make_post_page.dart';
+import 'Pages/post_detail_page.dart';
 import 'Pages/sign_up_page.dart';
 
 void main() {
@@ -26,6 +27,7 @@ class MyApp extends StatelessWidget {
         '/feedpage': (context) => FeedPage(),
         '/communitypage': (context) => CommunityPage(),
         '/communitydetail': (context) => CommunityDetail(),
+        '/postdetail': (context) => PostDetail(),
       },
     );
   }
