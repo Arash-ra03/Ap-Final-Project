@@ -224,7 +224,7 @@ class _CommunityPageState extends State<CommunityPage> {
                   "image.png",
                 ),
               ),
-              tileColor: Colors.black,
+              tileColor: index%2 ? Colors.blueGrey : Colors.black,
               title: Text(
                 '${list[index]}',
                 style: TextStyle(
