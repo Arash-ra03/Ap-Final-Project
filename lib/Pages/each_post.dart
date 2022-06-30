@@ -12,7 +12,6 @@ class MyPost extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Container(
-
           height: 300,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
@@ -40,7 +39,6 @@ class MyPost extends StatelessWidget {
                         fontSize: 15.0,
                         fontWeight: FontWeight.bold,
                         color: Colors.grey,
-
                       ),
                     ),
                   ],
@@ -78,25 +76,32 @@ class MyPost extends StatelessWidget {
                   ),
                 ),
               ),
-
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Icon(Icons.arrow_upward),
+                    GestureDetector(
+                      child: Icon(Icons.arrow_upward),
+                      onTap: () {},
+                    ),
                     SizedBox(
                       width: 10,
                     ),
-                    Icon(Icons.arrow_downward),
+                    GestureDetector(
+                      child: Icon(Icons.arrow_downward),
+                      onTap: () {},
+                    ),
                     SizedBox(
                       width: 10,
                     ),
-                    Icon(Icons.messenger_outline),
+                    GestureDetector(
+                      child: Icon(Icons.messenger_outline),
+                      onTap: () {},
+                    ),
                   ],
                 ),
               )
-
             ],
           ),
         ),
