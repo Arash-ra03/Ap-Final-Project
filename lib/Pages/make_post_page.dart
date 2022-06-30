@@ -14,7 +14,7 @@ class _MakePostState extends State<MakePost> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.grey[900],
         body: SafeArea(
           child: Column(children: <Widget>[
             Row(
@@ -86,6 +86,8 @@ class _MakePostState extends State<MakePost> {
                     color: Colors.grey,
                     fontWeight: FontWeight.bold,
                   ),
+                  fillColor: Colors.black26,
+                  filled: true,
                   focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(5.0),
                     borderSide: BorderSide(
@@ -119,7 +121,10 @@ class _MakePostState extends State<MakePost> {
                   hintStyle: TextStyle(
                     color: Colors.grey,
                     fontWeight: FontWeight.bold,
+
                   ),
+                  fillColor: Colors.black26,
+                  filled: true,
                   enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(5.0),
                     borderSide: BorderSide(
