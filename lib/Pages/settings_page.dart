@@ -66,7 +66,7 @@ class _SettingsPageState extends State<SettingsPage> {
                       color: Colors.white, fontWeight: FontWeight.bold),
                 ),
                 onTap: () {
-                  Navigator.pushNamed(context, '/login');
+                  Navigator.pushNamed(context, '/savepost');
                 },
               ),
               const SizedBox(
