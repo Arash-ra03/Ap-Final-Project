@@ -113,12 +113,13 @@ class ProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
         title: const Text('Profile'),
         automaticallyImplyLeading: false,
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.grey[900],
       ),
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.grey[800],
       body: SafeArea(
         child: Center(
           child: Padding(
@@ -126,76 +127,78 @@ class ProfilePage extends StatelessWidget {
             child: Column(
               //mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                IconButton(
-                  icon: Icon(
-                    Icons.clear,
-                    color: Colors.deepOrange,
-                  ),
-                  onPressed: () {
-                    Navigator.pop(context);
-                  },
+                Row(
+                  children: [
+                    IconButton(
+                      icon: Icon(
+                        Icons.arrow_back,
+                        color: Colors.white,
+                      ),
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                    ),
+                  ],
                 ),
-                const Text(
-                  'Specifications',
-                  style: TextStyle(
-                    fontSize: 20.0,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.deepOrange,
-                    fontStyle: FontStyle.italic,
-                  ),
-                ),
+
                 const SizedBox(
                   height: 10.0,
                 ),
                 const Card(
+                  color: Colors.black26,
                   margin:
                       EdgeInsets.symmetric(vertical: 10.0, horizontal: 18.0),
                   child: ListTile(
+
                     leading: Icon(
                       Icons.email,
-                      color: Colors.deepOrange,
+                      color: Colors.grey,
                     ),
                     title: Text(
-                      'Email: f1@gmail.com',
+                      ' f1@gmail.com',
                       style: TextStyle(
                         fontFamily: 'Source Sans Pro',
-                        color: Colors.black,
+                        color: Colors.grey,
                         fontSize: 20.0,
                       ),
                     ),
                   ),
                 ),
                 const Card(
+                  color: Colors.black26,
                   margin:
                       EdgeInsets.symmetric(vertical: 10.0, horizontal: 18.0),
                   child: ListTile(
+
                     leading: Icon(
                       Icons.person,
-                      color: Colors.deepOrange,
+                      color: Colors.grey,
                     ),
                     title: Text(
-                      'Username: Zeitmaestro',
+                      ' Zeitmaestro',
                       style: TextStyle(
                         fontFamily: 'Source Sans Pro',
-                        color: Colors.black,
+                        color: Colors.grey,
                         fontSize: 20.0,
                       ),
                     ),
                   ),
                 ),
                 const Card(
+                  color: Colors.black26,
                   margin:
                       EdgeInsets.symmetric(vertical: 10.0, horizontal: 18.0),
                   child: ListTile(
+
                     leading: Icon(
                       Icons.lock,
-                      color: Colors.deepOrange,
+                      color: Colors.grey,
                     ),
                     title: Text(
-                      'Password: Reddit1401',
+                      ' Reddit1401',
                       style: TextStyle(
                         fontFamily: 'Source Sans Pro',
-                        color: Colors.black,
+                        color: Colors.grey,
                         fontSize: 20.0,
                       ),
                     ),
@@ -204,34 +207,30 @@ class ProfilePage extends StatelessWidget {
                 const SizedBox(
                   height: 5.0,
                 ),
-                const Text(
-                  'Change Specifications',
-                  style: TextStyle(
-                    fontSize: 20.0,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.deepOrange,
-                    fontStyle: FontStyle.italic,
-                  ),
-                ),
+
                 const SizedBox(
                   height: 5.0,
                 ),
                 Padding(
                   padding: const EdgeInsets.all(15.0),
                   child: TextField(
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
                     decoration: InputDecoration(
-                      filled: false,
-                      fillColor: Colors.cyan[100],
+                      filled: true,
+                      fillColor: Colors.black26,
                       hintText: 'Enter new email',
                       hintStyle: TextStyle(
-                        color: Colors.black,
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
                       ),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10.0),
                       ),
                       prefixIcon: Icon(
                         Icons.email,
-                        color: Colors.deepOrange,
+                        color: Colors.orange,
                       ),
                     ),
                   ),
@@ -239,19 +238,23 @@ class ProfilePage extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.all(15.0),
                   child: TextField(
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
                     decoration: InputDecoration(
-                      filled: false,
-                      fillColor: Colors.cyan[100],
+                      filled: true,
+                      fillColor: Colors.black26,
                       hintText: 'Enter new username',
                       hintStyle: TextStyle(
-                        color: Colors.black,
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
                       ),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10.0),
                       ),
                       prefixIcon: Icon(
                         Icons.person,
-                        color: Colors.deepOrange,
+                        color: Colors.orange,
                       ),
                     ),
                   ),
@@ -259,25 +262,30 @@ class ProfilePage extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.all(15.0),
                   child: TextField(
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
                     decoration: InputDecoration(
-                      filled: false,
-                      fillColor: Colors.cyan[100],
+
+                      filled: true,
+                      fillColor: Colors.black26,
                       hintText: 'Enter new password',
                       hintStyle: TextStyle(
-                        color: Colors.black,
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
                       ),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10.0),
                       ),
                       prefixIcon: Icon(
                         Icons.lock,
-                        color: Colors.deepOrange,
+                        color: Colors.orange,
                       ),
                     ),
                   ),
                 ),
                 ElevatedButton(
-                  style: ElevatedButton.styleFrom(primary: Colors.deepOrange),
+                  style: ElevatedButton.styleFrom(primary: Colors.blueGrey[900]),
                   child: Text(
                     'Change',
                     style: TextStyle(
