@@ -12,7 +12,7 @@ class MyComment extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Container(
-          height: 150.0,
+          height: 180.0,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
             color: Colors.black26,
@@ -46,33 +46,16 @@ class MyComment extends StatelessWidget {
                   ],
                 ),
               ),
-              Row(
-                children: [
-                  SizedBox(
-                    width: 65,
-                  ),
-                  Text(
-                    'Community Name',
-                    style: TextStyle(
-                      fontSize: 12.0,
-                      color: Colors.grey,
-                    ),
-                  ),
-                ],
-              ),
-              SizedBox(
-                height: 20,
-              ),
+
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: SizedBox(
                   width: double.infinity,
-                  height: 150,
+                  height: 60,
                   child: Text(
-                    'Title',
+                    'Text messaging, or texting, is the act of composing and sending electronic messages, typically consisting of alphabetic ',
                     style: TextStyle(
-                      fontSize: 18.0,
-                      fontWeight: FontWeight.bold,
+                      fontSize: 15.0,
                       color: Colors.white,
                     ),
                   ),
@@ -81,7 +64,7 @@ class MyComment extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     GestureDetector(
                       child: Icon(
@@ -91,7 +74,7 @@ class MyComment extends StatelessWidget {
                       onTap: () {},
                     ),
                     SizedBox(
-                      width: 10,
+                      width: 20,
                     ),
                     GestureDetector(
                       child: Icon(
@@ -100,18 +83,7 @@ class MyComment extends StatelessWidget {
                       ),
                       onTap: () {},
                     ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    GestureDetector(
-                      child: Icon(
-                        Icons.messenger_outline,
-                        color: Colors.grey,
-                      ),
-                      onTap: () {
-                        Navigator.pushNamed(context, '/postdetail');
-                      },
-                    ),
+
                   ],
                 ),
               )
