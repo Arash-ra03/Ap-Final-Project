@@ -12,7 +12,7 @@ class MyPost extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Container(
-          height: 300,
+          height: 300.0,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
             color: Colors.black26,

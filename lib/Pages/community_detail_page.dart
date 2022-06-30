@@ -1,8 +1,22 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class CommunityDetail extends StatelessWidget {
+import 'each_post.dart';
+
+class CommunityDetail extends StatefulWidget {
   const CommunityDetail({Key? key}) : super(key: key);
+
+  @override
+  State<CommunityDetail> createState() => _CommunityDetailState();
+}
+
+class _CommunityDetailState extends State<CommunityDetail> {
+  final List _posts = [
+    'post 1',
+    'post 2',
+    'post 3',
+    'post 4',
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -77,16 +91,28 @@ class CommunityDetail extends StatelessWidget {
                 ),
                 child: SizedBox(
                   width: double.infinity,
-                  height: 120,
+                  height: 100,
                   child: Text(
                     'This is f1 Community for f1 fans!!',
                     style: TextStyle(
                       fontSize: 15.0,
                       color: Colors.white,
-
                     ),
                   ),
                 ),
+              ),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Expanded(
+              child: ListView.builder(
+                itemCount: _posts.length,
+                itemBuilder: (context, index) {
+                  return MyPost(
+                    child: _posts[index],
+                  );
+                },
               ),
             ),
           ],
