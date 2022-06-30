@@ -103,7 +103,9 @@ class MyPost extends StatelessWidget {
                         Icons.messenger_outline,
                         color: Colors.grey,
                       ),
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.pushNamed(context, '/postdetail');
+                      },
                     ),
                   ],
                 ),
