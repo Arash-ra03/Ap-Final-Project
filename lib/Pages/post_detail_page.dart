@@ -1,11 +1,24 @@
+import 'package:ap_final_project/Pages/each_comment.dart';
 import 'package:ap_final_project/Pages/each_post.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'each_post_detail.dart';
 
-class PostDetail extends StatelessWidget {
+class PostDetail extends StatefulWidget {
   const PostDetail({Key? key}) : super(key: key);
+
+  @override
+  State<PostDetail> createState() => _PostDetailState();
+}
+
+class _PostDetailState extends State<PostDetail> {
+  final List _comments = [
+    'post 1',
+    'post 2',
+    'post 3',
+    'post 4',
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -21,6 +34,17 @@ class PostDetail extends StatelessWidget {
       body: Column(
         children: [
           MyPostDetail(child: "child"),
+          Expanded(
+            child: ListView.builder(
+              itemCount: _comments.length,
+              itemBuilder: (context, index) {
+                return MyComment(
+                  child: _comments[index],
+                );
+              },
+            ),
+          ),
+
         ]
       ),
       bottomSheet: Container(
