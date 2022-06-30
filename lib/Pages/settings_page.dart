@@ -88,6 +88,15 @@ class ProfilePage extends StatelessWidget{
             child: Column(
               //mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
+                IconButton(
+                  icon: Icon(
+                    Icons.clear,
+                    color: Colors.deepOrange,
+                  ),
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                ),
                 const Text(
                   'Specifications',
                   style: TextStyle(
@@ -387,7 +396,16 @@ class AboutUsPage extends StatelessWidget{
       body: SafeArea(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: const <Widget>[
+          children: <Widget>[
+            IconButton(
+              icon: Icon(
+                Icons.clear,
+                color: Colors.deepOrange,
+              ),
+              onPressed: () {
+                Navigator.pop(context);
+              },
+            ),
             CircleAvatar (
               radius: 50.0,
               backgroundImage: AssetImage('images/reddit_icon.webp'),
