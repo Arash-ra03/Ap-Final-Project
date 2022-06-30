@@ -437,23 +437,28 @@ class AboutUsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[800],
       appBar: AppBar(
         title: const Text('About Us'),
         automaticallyImplyLeading: false,
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.grey[900],
       ),
       body: SafeArea(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          //mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            IconButton(
-              icon: Icon(
-                Icons.clear,
-                color: Colors.deepOrange,
-              ),
-              onPressed: () {
-                Navigator.pop(context);
-              },
+            Row(
+              children: [
+                IconButton(
+                  icon: Icon(
+                    Icons.arrow_back,
+                    color: Colors.white,
+                  ),
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                ),
+              ],
             ),
             CircleAvatar(
               radius: 50.0,
@@ -467,7 +472,7 @@ class AboutUsPage extends StatelessWidget {
               style: TextStyle(
                 fontFamily: 'Pacifico',
                 fontSize: 20.0,
-                color: Colors.black,
+                color: Colors.grey,
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -478,7 +483,7 @@ class AboutUsPage extends StatelessWidget {
               'Dr.Vahidi - Summer 1401',
               style: TextStyle(
                 fontFamily: 'Pacifico',
-                color: Colors.black,
+                color: Colors.white,
                 fontSize: 20.0,
                 letterSpacing: 2.5,
                 fontWeight: FontWeight.bold,
@@ -492,6 +497,7 @@ class AboutUsPage extends StatelessWidget {
               ),
             ),
             Card(
+              color: Colors.black26,
               margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
               child: ListTile(
                 leading: Icon(
@@ -502,13 +508,15 @@ class AboutUsPage extends StatelessWidget {
                   'Arshia Paridari',
                   style: TextStyle(
                     fontFamily: 'Source Sans Pro',
-                    color: Colors.black,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
                     fontSize: 20.0,
                   ),
                 ),
               ),
             ),
             Card(
+              color: Colors.black26,
               margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
               child: ListTile(
                 leading: Icon(
@@ -516,10 +524,11 @@ class AboutUsPage extends StatelessWidget {
                   color: Colors.deepOrange,
                 ),
                 title: Text(
-                  'Arash Reza Ali',
+                  'Arash Rezaali',
                   style: TextStyle(
                     fontFamily: 'Source Sans Pro',
-                    color: Colors.black,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
                     fontSize: 20.0,
                   ),
                 ),
