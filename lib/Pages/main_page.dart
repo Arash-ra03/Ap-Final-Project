@@ -19,7 +19,6 @@ class _MainPageState extends State<MainPage> {
     FeedPage(),
     CommunityPage(),
     MakePost(),
-    Center(child: Text('Comments', style: TextStyle(fontSize: 60),),),
     SettingsPage(),
   ];
   @override
@@ -52,10 +51,6 @@ class _MainPageState extends State<MainPage> {
           BottomNavigationBarItem(
             icon: Icon(Icons.add),
             label: 'Add',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.comment),
-            label: 'Comments',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.settings),

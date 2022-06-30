@@ -8,70 +8,108 @@ class _SettingsPageState extends State<SettingsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Settings'),
-        automaticallyImplyLeading: false,
-        backgroundColor: Colors.black,
-      ),
-      body: SafeArea(
-        child: ListView(
-          padding: EdgeInsets.all(24),
-          children: [
-            ListTile(
-              leading: Icon(Icons.person, color: Colors.orange,),
-              title: Text('Profile'),
-              onTap: () {
-                Navigator.pushNamed(context, '/profile');
-              },
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            ListTile(
-              leading: Icon(Icons.group_add, color: Colors.orange),
-              title: Text('Create Community'),
-              onTap: () {
-                Navigator.pushNamed(context, '/createcommunity');
-              },
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            ListTile(
-              leading: Icon(Icons.save, color: Colors.orange),
-              title: Text('Saved Posts'),
-              onTap: () {
-                Navigator.pushNamed(context, '/login');
-              },
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            ListTile(
-              leading: Icon(Icons.info_outline, color: Colors.orange),
-              title: Text('About Us'),
-              onTap: () {
-                Navigator.pushNamed(context, '/aboutus');
-              },
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            ListTile(
-              leading: Icon(Icons.exit_to_app, color: Colors.orange),
-              title: Text('Logout'),
-              onTap: () {
-                Navigator.pushNamed(context, '/login');
-              },
-            ),
-          ],
+        backgroundColor: Colors.grey[800],
+        appBar: AppBar(
+          title: const Text('Settings'),
+          automaticallyImplyLeading: false,
+          backgroundColor: Colors.grey[900],
         ),
-      )
-    );
+        body: SafeArea(
+          child: ListView(
+            padding: EdgeInsets.all(24),
+            children: [
+              ListTile(
+                tileColor: Colors.black26,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10)),
+                leading: Icon(
+                  Icons.person,
+                  color: Colors.orange,
+                ),
+                title: Text(
+                  'Profile',
+                  style: TextStyle(
+                      color: Colors.white, fontWeight: FontWeight.bold),
+                ),
+                onTap: () {
+                  Navigator.pushNamed(context, '/profile');
+                },
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              ListTile(
+                tileColor: Colors.black26,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10)),
+                leading: Icon(Icons.group_add, color: Colors.orange),
+                title: Text(
+                  'Create Community',
+                  style: TextStyle(
+                      color: Colors.white, fontWeight: FontWeight.bold),
+                ),
+                onTap: () {
+                  Navigator.pushNamed(context, '/createcommunity');
+                },
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              ListTile(
+                tileColor: Colors.black26,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10)),
+                leading: Icon(Icons.save, color: Colors.orange),
+                title: Text(
+                  'Saved Posts',
+                  style: TextStyle(
+                      color: Colors.white, fontWeight: FontWeight.bold),
+                ),
+                onTap: () {
+                  Navigator.pushNamed(context, '/login');
+                },
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              ListTile(
+                tileColor: Colors.black26,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10)),
+                leading: Icon(Icons.info_outline, color: Colors.orange),
+                title: Text(
+                  'About Us',
+                  style: TextStyle(
+                      color: Colors.white, fontWeight: FontWeight.bold),
+                ),
+                onTap: () {
+                  Navigator.pushNamed(context, '/aboutus');
+                },
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              ListTile(
+                tileColor: Colors.black26,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10)),
+                leading: Icon(Icons.exit_to_app, color: Colors.orange),
+                title: Text(
+                  'Logout',
+                  style: TextStyle(
+                      color: Colors.white, fontWeight: FontWeight.bold),
+                ),
+                onTap: () {
+                  Navigator.pushNamed(context, '/login');
+                },
+              ),
+            ],
+          ),
+        ));
   }
 }
 
-class ProfilePage extends StatelessWidget{
+class ProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -106,13 +144,12 @@ class ProfilePage extends StatelessWidget{
                     fontStyle: FontStyle.italic,
                   ),
                 ),
-
                 const SizedBox(
                   height: 10.0,
                 ),
-
                 const Card(
-                  margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 18.0),
+                  margin:
+                      EdgeInsets.symmetric(vertical: 10.0, horizontal: 18.0),
                   child: ListTile(
                     leading: Icon(
                       Icons.email,
@@ -128,9 +165,9 @@ class ProfilePage extends StatelessWidget{
                     ),
                   ),
                 ),
-
                 const Card(
-                  margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 18.0),
+                  margin:
+                      EdgeInsets.symmetric(vertical: 10.0, horizontal: 18.0),
                   child: ListTile(
                     leading: Icon(
                       Icons.person,
@@ -146,9 +183,9 @@ class ProfilePage extends StatelessWidget{
                     ),
                   ),
                 ),
-
                 const Card(
-                  margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 18.0),
+                  margin:
+                      EdgeInsets.symmetric(vertical: 10.0, horizontal: 18.0),
                   child: ListTile(
                     leading: Icon(
                       Icons.lock,
@@ -164,11 +201,9 @@ class ProfilePage extends StatelessWidget{
                     ),
                   ),
                 ),
-
                 const SizedBox(
                   height: 5.0,
                 ),
-
                 const Text(
                   'Change Specifications',
                   style: TextStyle(
@@ -178,11 +213,9 @@ class ProfilePage extends StatelessWidget{
                     fontStyle: FontStyle.italic,
                   ),
                 ),
-
                 const SizedBox(
                   height: 5.0,
                 ),
-
                 Padding(
                   padding: const EdgeInsets.all(15.0),
                   child: TextField(
@@ -203,7 +236,6 @@ class ProfilePage extends StatelessWidget{
                     ),
                   ),
                 ),
-
                 Padding(
                   padding: const EdgeInsets.all(15.0),
                   child: TextField(
@@ -224,7 +256,6 @@ class ProfilePage extends StatelessWidget{
                     ),
                   ),
                 ),
-
                 Padding(
                   padding: const EdgeInsets.all(15.0),
                   child: TextField(
@@ -245,7 +276,6 @@ class ProfilePage extends StatelessWidget{
                     ),
                   ),
                 ),
-
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(primary: Colors.deepOrange),
                   child: Text(
@@ -265,7 +295,6 @@ class ProfilePage extends StatelessWidget{
           ),
         ),
       ),
-
     );
   }
 }
@@ -283,12 +312,11 @@ class _CreateCommunityPageState extends State<CreateCommunityPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Create Community'),
-        automaticallyImplyLeading: false,
-        backgroundColor: Colors.black,
-      ),
-
+        appBar: AppBar(
+          title: const Text('Create Community'),
+          automaticallyImplyLeading: false,
+          backgroundColor: Colors.black,
+        ),
         backgroundColor: Colors.white,
         body: SafeArea(
           child: Column(children: <Widget>[
@@ -319,7 +347,6 @@ class _CreateCommunityPageState extends State<CreateCommunityPage> {
                 ),
               ],
             ),
-
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: TextField(
@@ -339,7 +366,6 @@ class _CreateCommunityPageState extends State<CreateCommunityPage> {
                   ),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10.0),
-
                   ),
                   prefixIcon: Icon(
                     Icons.title,
@@ -348,7 +374,6 @@ class _CreateCommunityPageState extends State<CreateCommunityPage> {
                 ),
               ),
             ),
-
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: TextField(
@@ -378,13 +403,11 @@ class _CreateCommunityPageState extends State<CreateCommunityPage> {
               ),
             ),
           ]),
-        )
-    );
+        ));
   }
 }
 
-
-class AboutUsPage extends StatelessWidget{
+class AboutUsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -406,7 +429,7 @@ class AboutUsPage extends StatelessWidget{
                 Navigator.pop(context);
               },
             ),
-            CircleAvatar (
+            CircleAvatar(
               radius: 50.0,
               backgroundImage: AssetImage('images/reddit_icon.webp'),
             ),
