@@ -26,6 +26,7 @@ class MyApp extends StatelessWidget {
         '/settingspage': (context) => SettingsPage(),
         '/aboutus': (context) => AboutUsPage(),
         '/profile': (context) => ProfilePage(),
+        '/createcommunity': (context) => CreateCommunityPage(),
       },
     );
   }

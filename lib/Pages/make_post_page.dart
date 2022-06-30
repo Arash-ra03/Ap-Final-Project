@@ -14,6 +14,7 @@ class _MakePostState extends State<MakePost> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
         backgroundColor: Colors.blueGrey,
         body: SafeArea(
           child: Column(children: <Widget>[
@@ -129,6 +130,7 @@ class _MakePostState extends State<MakePost> {
               ),
             ),
           ]),
-        ));
+        )
+    );
   }
 }
