@@ -26,13 +26,13 @@ class _MakePostState extends State<MakePost> {
                     color: Colors.white,
                   ),
                   onPressed: () {
-                    Navigator.pop(context);
+                    Navigator.pushNamed(context, '/mainpage');
                   },
                 ),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(primary: Colors.white),
                   onPressed: () {
-                    Navigator.pushNamed(context, '/');
+                    Navigator.pushNamed(context, '/mainpage');
                   },
                   child: Text(
                     'Next',
