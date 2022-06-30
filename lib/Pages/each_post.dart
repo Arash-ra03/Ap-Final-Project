@@ -15,10 +15,7 @@ class MyPost extends StatelessWidget {
           height: 300,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
-            color: Colors.blueGrey[800],
-            boxShadow: [
-              BoxShadow(color: Colors.blueGrey, spreadRadius: 2),
-            ],
+            color: Colors.black26,
           ),
           child: Column(
             children: [
@@ -82,21 +79,30 @@ class MyPost extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     GestureDetector(
-                      child: Icon(Icons.arrow_upward),
+                      child: Icon(
+                        Icons.arrow_upward,
+                        color: Colors.grey,
+                      ),
                       onTap: () {},
                     ),
                     SizedBox(
                       width: 10,
                     ),
                     GestureDetector(
-                      child: Icon(Icons.arrow_downward),
+                      child: Icon(
+                        Icons.arrow_downward,
+                        color: Colors.grey,
+                      ),
                       onTap: () {},
                     ),
                     SizedBox(
                       width: 10,
                     ),
                     GestureDetector(
-                      child: Icon(Icons.messenger_outline),
+                      child: Icon(
+                        Icons.messenger_outline,
+                        color: Colors.grey,
+                      ),
                       onTap: () {},
                     ),
                   ],
