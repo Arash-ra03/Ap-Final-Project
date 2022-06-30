@@ -2,6 +2,8 @@ import 'package:ap_final_project/Pages/each_post.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'each_post_detail.dart';
+
 class PostDetail extends StatelessWidget {
   const PostDetail({Key? key}) : super(key: key);
 
@@ -18,7 +20,7 @@ class PostDetail extends StatelessWidget {
       ),
       body: Column(
         children: [
-          MyPost(child: "child"),
+          MyPostDetail(child: "child"),
         ]
       ),
       bottomSheet: Container(
