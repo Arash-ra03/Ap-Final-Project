@@ -1,5 +1,6 @@
 import 'package:ap_final_project/Pages/feed_page.dart';
 import 'package:ap_final_project/Pages/main_page.dart';
+import 'package:ap_final_project/Pages/settings_page.dart';
 import 'package:flutter/material.dart';
 
 import 'Pages/login_page.dart';
@@ -22,6 +23,9 @@ class MyApp extends StatelessWidget {
         '/makepost': (context) => MakePost(),
         '/mainpage': (context) => MainPage(),
         '/feedpage': (context) => FeedPage(),
+        '/settingspage': (context) => SettingsPage(),
+        '/aboutus': (context) => AboutUsPage(),
+        '/profile': (context) => ProfilePage(),
       },
     );
   }
