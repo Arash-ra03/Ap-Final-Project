@@ -26,6 +26,11 @@ class MyPost extends StatelessWidget {
                   children: [
                     CircleAvatar(
                       radius: 20.0,
+                      child: ClipRect(
+                        child: Image.network(
+                            "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/F1.svg/2560px-F1.svg.png"),
+                      ),
+                      backgroundColor: Colors.black26,
                     ),
                     SizedBox(
                       width: 20,

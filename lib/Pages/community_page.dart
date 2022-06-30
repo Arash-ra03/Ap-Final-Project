@@ -79,8 +79,9 @@ class CommunityPageSearch extends SearchDelegate {
           },
           leading: CircleAvatar(
             radius: 15,
-            backgroundImage: AssetImage(
-              "image.png",
+            child: ClipRect(
+              child: Image.network(
+                  "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/F1.svg/2560px-F1.svg.png"),
             ),
           ),
           textColor: Colors.white,
@@ -132,8 +133,9 @@ class CommunityPageSearch extends SearchDelegate {
           },
           leading: CircleAvatar(
             radius: 15,
-            backgroundImage: AssetImage(
-              "image.png",
+            child: ClipRect(
+              child: Image.network(
+                  "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/F1.svg/2560px-F1.svg.png"),
             ),
           ),
           textColor: Colors.white,
@@ -241,8 +243,9 @@ class _CommunityPageState extends State<CommunityPage> {
               },
               leading: CircleAvatar(
                 radius: 15,
-                backgroundImage: AssetImage(
-                  "image.png",
+                child: ClipRect(
+                  child: Image.network(
+                      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/F1.svg/2560px-F1.svg.png"),
                 ),
               ),
               tileColor: getBool(index) ? Colors.black54 : Colors.black,
