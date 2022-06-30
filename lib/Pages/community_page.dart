@@ -21,6 +21,7 @@ class CommunityPageSearch extends SearchDelegate {
           ),
     );
   }
+
   List<String> list = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
 
   @override
@@ -47,6 +48,13 @@ class CommunityPageSearch extends SearchDelegate {
 
   @override
   Widget buildResults(BuildContext context) {
+    bool getBool(int num) {
+      if (num % 2 == 0) {
+        return true;
+      }
+      return false;
+    }
+
     List<String> matchQuery = [];
     for (var fruit in list) {
       if (fruit.toLowerCase().contains(query.toLowerCase())) {
@@ -58,7 +66,6 @@ class CommunityPageSearch extends SearchDelegate {
       itemBuilder: (context, index) {
         var result = matchQuery[index];
         return ListTile(
-
           title: Text(
             result,
             style: TextStyle(
@@ -86,7 +93,7 @@ class CommunityPageSearch extends SearchDelegate {
               Navigator.pushNamed(context, '/');
             },
           ),
-          tileColor: Colors.black,
+          tileColor: getBool(index) ? Colors.blueGrey[800] : Colors.black,
         );
       },
     );
@@ -94,6 +101,13 @@ class CommunityPageSearch extends SearchDelegate {
 
   @override
   Widget buildSuggestions(BuildContext context) {
+    bool getBool(int num) {
+      if (num % 2 == 0) {
+        return true;
+      }
+      return false;
+    }
+
     List<String> matchQuery = [];
     for (var fruit in list) {
       if (fruit.toLowerCase().contains(query.toLowerCase())) {
@@ -132,13 +146,13 @@ class CommunityPageSearch extends SearchDelegate {
               Navigator.pushNamed(context, '/');
             },
           ),
-          tileColor: Colors.black,
+          tileColor: getBool(index) ? Colors.blueGrey[800] : Colors.black,
         );
       },
     );
   }
 
-  /*@override
+/*@override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
@@ -193,6 +207,13 @@ class CommunityPage extends StatefulWidget {
 class _CommunityPageState extends State<CommunityPage> {
   List<String> list = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
 
+  bool getBool(int num) {
+    if (num % 2 == 0) {
+      return true;
+    }
+    return false;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -224,7 +245,7 @@ class _CommunityPageState extends State<CommunityPage> {
                   "image.png",
                 ),
               ),
-              tileColor: index%2 ? Colors.blueGrey : Colors.black,
+              tileColor: getBool(index) ? Colors.blueGrey[900] : Colors.black,
               title: Text(
                 '${list[index]}',
                 style: TextStyle(
