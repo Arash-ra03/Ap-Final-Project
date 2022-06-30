@@ -8,39 +8,36 @@ class CommunityDetail extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
-      bottomSheet: Container(
-        color: Colors.black87,
-        padding: EdgeInsets.only(left: 10, right: 10, bottom: 10, top: 10),
-        child: TextField(
-          style: TextStyle(color: Colors.grey),
-          decoration: InputDecoration(
-            contentPadding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-            filled: true,
-            fillColor: Colors.black26,
-            hintText: 'Add a comment',
-            hintStyle: TextStyle(
-              color: Colors.grey,
-            ),
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(10.0),
-              borderSide: BorderSide(
-                color: Colors.black26,
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(170),
+        child: AppBar(
+          centerTitle: true,
+          flexibleSpace: Container(
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: NetworkImage(
+                    "https://d10yn8o4stjvjq.cloudfront.net/wp-content/uploads/2022/06/f1-22-physics.jpg"),
+                fit: BoxFit.cover,
               ),
-            ),
-            focusedBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(10.0),
-              borderSide: BorderSide(
-                color: Colors.black26,
-              ),
-            ),
-            prefixIcon: Icon(
-              Icons.comment,
-              color: Colors.white,
             ),
           ),
         ),
       ),
 
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: CircleAvatar(
+          radius: 45,
+          backgroundColor: Colors.grey,
+          child: CircleAvatar(
+            radius: 40,
+            child: ClipRect(
+              child: Image.network("https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/F1.svg/2560px-F1.svg.png"),
+            ),
+            backgroundColor: Colors.black,
+          ),
+        ),
+      ),
     );
   }
 }
