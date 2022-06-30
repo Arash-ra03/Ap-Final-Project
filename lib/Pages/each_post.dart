@@ -90,9 +90,7 @@ class MyPost extends StatelessWidget {
                       ),
                       onTap: () {},
                     ),
-                    SizedBox(
-                      width: 10,
-                    ),
+
                     GestureDetector(
                       child: Icon(
                         Icons.arrow_downward,
@@ -100,9 +98,7 @@ class MyPost extends StatelessWidget {
                       ),
                       onTap: () {},
                     ),
-                    SizedBox(
-                      width: 10,
-                    ),
+
                     GestureDetector(
                       child: Icon(
                         Icons.messenger_outline,
@@ -112,6 +108,13 @@ class MyPost extends StatelessWidget {
                         Navigator.pushNamed(context, '/postdetail');
                       },
                     ),
+                    GestureDetector(
+                      child: Icon(
+                        Icons.bookmark_border_outlined,
+                        color: Colors.grey,
+                      ),
+                      onTap: (){},
+                    )
                   ],
                 ),
               )
