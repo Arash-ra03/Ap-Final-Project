@@ -6,7 +6,7 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      backgroundColor: Colors.teal,
+      backgroundColor: Colors.grey[800],
       body: SafeArea(
         child: Center(
           child: Padding(
@@ -17,10 +17,11 @@ class LoginPage extends StatelessWidget {
                 Text(
                   'Login',
                   style: TextStyle(
+                    fontFamily: 'pacifico',
                     fontSize: 30.0,
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
-                    fontStyle: FontStyle.italic,
+
                   ),
                 ),
                 SizedBox(
@@ -30,18 +31,24 @@ class LoginPage extends StatelessWidget {
                   padding: const EdgeInsets.all(15.0),
                   child: TextField(
                     decoration: InputDecoration(
-                      filled: false,
-                      fillColor: Colors.cyan[100],
+                      filled: true,
+                      fillColor: Colors.black26,
                       hintText: 'Enter your email',
                       hintStyle: TextStyle(
-                        color: Colors.white,
+                        color: Colors.grey,
                       ),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10.0),
                       ),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10.0),
+                        borderSide: BorderSide(
+                          color: Colors.orange,
+                        ),
+                      ),
                       prefixIcon: Icon(
                         Icons.email,
-                        color: Colors.white,
+                        color: Colors.orange,
                       ),
                     ),
                   ),
@@ -50,24 +57,33 @@ class LoginPage extends StatelessWidget {
                   padding: const EdgeInsets.all(15.0),
                   child: TextField(
                     decoration: InputDecoration(
-                      filled: false,
-                      fillColor: Colors.cyan[100],
+                      filled: true,
+                      fillColor: Colors.black26,
                       hintText: 'Enter your password',
                       hintStyle: TextStyle(
-                        color: Colors.white,
+                        color: Colors.grey,
                       ),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10.0),
                       ),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10.0),
+                        borderSide: BorderSide(
+                          color: Colors.orange,
+                        ),
+                      ),
                       prefixIcon: Icon(
                         Icons.lock,
-                        color: Colors.white,
+                        color: Colors.orange,
                       ),
                     ),
                   ),
                 ),
+                SizedBox(
+                  height: 60.0,
+                ),
                 ElevatedButton(
-                  style: ElevatedButton.styleFrom(primary: Colors.lightGreen),
+                  style: ElevatedButton.styleFrom(primary: Colors.orange[700]),
                   child: Text(
                     'Login',
                     style: TextStyle(
@@ -80,6 +96,9 @@ class LoginPage extends StatelessWidget {
                     Navigator.pushNamed(context, '/mainpage');
                   },
                 ),
+                SizedBox(
+                  height: 5.0,
+                ),
                 TextButton(
                   onPressed: () {
                     Navigator.pushNamed(context, '/signup');
@@ -87,10 +106,11 @@ class LoginPage extends StatelessWidget {
                   child: Text(
                     'Have no account? SignUp here',
                     style: TextStyle(
+                      fontFamily: 'Source Sans Pro',
                       fontSize: 20.0,
                       fontWeight: FontWeight.normal,
                       color: Colors.white,
-                      fontStyle: FontStyle.italic,
+
                     ),
                   ),
                 ),
