@@ -223,7 +223,7 @@ class _CommunityPageState extends State<CommunityPage> {
       appBar: AppBar(
         title: Text('Community'),
         automaticallyImplyLeading: false,
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.grey[900],
         actions: [
           IconButton(
             onPressed: () {

@@ -14,7 +14,7 @@ class _MakePostState extends State<MakePost> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.grey[900],
+        backgroundColor: Colors.grey[800],
         body: SafeArea(
           child: Column(children: <Widget>[
             Row(
