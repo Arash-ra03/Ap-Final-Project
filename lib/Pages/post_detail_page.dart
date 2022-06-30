@@ -8,6 +8,13 @@ class PostDetail extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Scaffold(
       backgroundColor: Colors.black,
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(40),
+        child: AppBar(
+          backgroundColor: Colors.grey[900],
+
+        ),
+      ),
       bottomSheet: Container(
         color: Colors.black87,
         padding: EdgeInsets.only(left: 10, right: 10, bottom: 10, top: 10),
