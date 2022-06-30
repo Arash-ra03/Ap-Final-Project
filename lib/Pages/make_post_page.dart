@@ -92,14 +92,14 @@ class _MakePostState extends State<MakePost> {
                     borderRadius: BorderRadius.circular(5.0),
                     borderSide: BorderSide(
                       color: Colors.white,
-                      width: 3,
+                      width: 2,
                     ),
                   ),
                   enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(5.0),
                     borderSide: BorderSide(
                       color: Colors.blueGrey,
-                      width: 3,
+                      width: 2,
                     )
                   ),
                   prefixIcon: Icon(
@@ -129,14 +129,14 @@ class _MakePostState extends State<MakePost> {
                     borderRadius: BorderRadius.circular(5.0),
                     borderSide: BorderSide(
                       color: Colors.blueGrey,
-                      width: 3,
+                      width: 2,
                     ),
                   ),
                   focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(5.0),
                     borderSide: BorderSide(
                       color: Colors.white,
-                      width: 3,
+                      width: 2,
                     ),
                   ),
                   prefixIcon: Icon(

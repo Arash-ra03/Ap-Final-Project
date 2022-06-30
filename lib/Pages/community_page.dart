@@ -94,7 +94,7 @@ class CommunityPageSearch extends SearchDelegate {
               Navigator.pushNamed(context, '/');
             },
           ),
-          tileColor: getBool(index) ? Colors.black87 : Colors.black,
+          tileColor: getBool(index) ? Colors.black87 : Colors.black26,
         );
       },
     );
@@ -148,7 +148,7 @@ class CommunityPageSearch extends SearchDelegate {
               Navigator.pushNamed(context, '/');
             },
           ),
-          tileColor: getBool(index) ? Colors.black87 : Colors.black,
+          tileColor: getBool(index) ? Colors.black87 : Colors.black26,
         );
       },
     );
@@ -219,7 +219,7 @@ class _CommunityPageState extends State<CommunityPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black87,
+      backgroundColor: Colors.grey[800],
       appBar: AppBar(
         title: Text('Community'),
         automaticallyImplyLeading: false,
@@ -248,7 +248,7 @@ class _CommunityPageState extends State<CommunityPage> {
                       "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/F1.svg/2560px-F1.svg.png"),
                 ),
               ),
-              tileColor: getBool(index) ? Colors.black54 : Colors.black,
+              tileColor: getBool(index) ? Colors.black54 : Colors.black26,
               title: Text(
                 '${list[index]}',
                 style: TextStyle(

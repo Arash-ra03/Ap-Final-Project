@@ -3,8 +3,10 @@ import 'package:ap_final_project/Pages/main_page.dart';
 import 'package:ap_final_project/Pages/settings_page.dart';
 import 'package:flutter/material.dart';
 
+import 'Pages/community_detail_page.dart';
 import 'Pages/login_page.dart';
 import 'Pages/make_post_page.dart';
+import 'Pages/post_detail_page.dart';
 import 'Pages/sign_up_page.dart';
 
 void main() {
@@ -27,6 +29,8 @@ class MyApp extends StatelessWidget {
         '/aboutus': (context) => AboutUsPage(),
         '/profile': (context) => ProfilePage(),
         '/createcommunity': (context) => CreateCommunityPage(),
+        '/postdetail': (context) => PostDetail(),
+        '/communitydetail': (context) => CommunityDetail(),
       },
     );
   }
