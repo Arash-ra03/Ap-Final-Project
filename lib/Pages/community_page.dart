@@ -75,7 +75,7 @@ class CommunityPageSearch extends SearchDelegate {
             ),
           ),
           onTap: () {
-            Navigator.pushNamed(context, '/');
+            Navigator.pushNamed(context, '/communitydetail');
           },
           leading: CircleAvatar(
             radius: 15,
@@ -128,7 +128,7 @@ class CommunityPageSearch extends SearchDelegate {
             ),
           ),
           onTap: () {
-            Navigator.pushNamed(context, '/');
+            Navigator.pushNamed(context, '/communitydetail');
           },
           leading: CircleAvatar(
             radius: 15,
@@ -237,7 +237,7 @@ class _CommunityPageState extends State<CommunityPage> {
           itemBuilder: (context, index) {
             return ListTile(
               onTap: () {
-                Navigator.pushNamed(context, '/');
+                Navigator.pushNamed(context, '/communitydetail');
               },
               leading: CircleAvatar(
                 radius: 15,

@@ -2,6 +2,8 @@ import 'package:ap_final_project/Pages/feed_page.dart';
 import 'package:ap_final_project/Pages/main_page.dart';
 import 'package:flutter/material.dart';
 
+import 'Pages/community_detail_page.dart';
+import 'Pages/community_page.dart';
 import 'Pages/login_page.dart';
 import 'Pages/make_post_page.dart';
 import 'Pages/sign_up_page.dart';
@@ -22,6 +24,8 @@ class MyApp extends StatelessWidget {
         '/makepost': (context) => MakePost(),
         '/mainpage': (context) => MainPage(),
         '/feedpage': (context) => FeedPage(),
+        '/communitypage': (context) => CommunityPage(),
+        '/communitydetail': (context) => CommunityDetail(),
       },
     );
   }
