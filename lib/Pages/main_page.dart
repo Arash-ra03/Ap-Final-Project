@@ -1,5 +1,6 @@
 import 'package:ap_final_project/Pages/community_page.dart';
 import 'package:ap_final_project/Pages/feed_page.dart';
+import 'package:ap_final_project/Pages/settings_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -19,8 +20,7 @@ class _MainPageState extends State<MainPage> {
     CommunityPage(),
     MakePost(),
     Center(child: Text('Comments', style: TextStyle(fontSize: 60),),),
-    Center(child: Text('Settings', style: TextStyle(fontSize: 60),),),
-
+    SettingsPage(),
   ];
   @override
   Widget build(BuildContext context) {
