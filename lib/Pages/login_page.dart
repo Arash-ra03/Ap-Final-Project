@@ -30,6 +30,9 @@ class LoginPage extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.all(15.0),
                   child: TextField(
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
                     decoration: InputDecoration(
                       filled: true,
                       fillColor: Colors.black26,
@@ -56,6 +59,9 @@ class LoginPage extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.all(15.0),
                   child: TextField(
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
                     decoration: InputDecoration(
                       filled: true,
                       fillColor: Colors.black26,
