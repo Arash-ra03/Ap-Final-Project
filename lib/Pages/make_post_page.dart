@@ -65,7 +65,7 @@ class _MakePostState extends State<MakePost> {
                     }
                   },
                   child: Text(
-                    'Next',
+                    'Add',
                     style: TextStyle(
                       color: Colors.black,
                     ),
