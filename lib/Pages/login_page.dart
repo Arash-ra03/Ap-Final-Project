@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-class LoginPage extends StatelessWidget {
+class LoginPage extends StatefulWidget {
+  @override
+  _LoginPageState createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
+  bool _isHidden = true;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -56,7 +63,50 @@ class LoginPage extends StatelessWidget {
                     ),
                   ),
                 ),
+
                 Padding(
+                  padding: const EdgeInsets.all(15.0),
+                  child: TextField(
+                    obscureText: _isHidden,
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                    decoration: InputDecoration(
+                      filled: true,
+                      fillColor: Colors.black26,
+                      hintText: 'Enter your password',
+                      hintStyle: TextStyle(
+                        color: Colors.grey,
+                      ),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10.0),
+                        borderSide: BorderSide(
+                          color: Colors.orange,
+                        ),
+                      ),
+                      prefixIcon: Icon(
+                        Icons.lock,
+                        color: Colors.orange,
+                      ),
+                      suffixIcon: IconButton(
+                        icon: Icon(
+                          _isHidden
+                              ? Icons.visibility
+                              : Icons.visibility_off,
+                          color: Colors.orange,
+                        ),
+                        onPressed: () {
+                          setState(() {
+                            _isHidden = !_isHidden;
+                          });
+                        },
+                      ),
+                    ),
+                  ),
+                /*
                   padding: const EdgeInsets.all(15.0),
                   child: TextField(
                     style: TextStyle(
@@ -84,7 +134,9 @@ class LoginPage extends StatelessWidget {
                       ),
                     ),
                   ),
+                  */
                 ),
+
                 SizedBox(
                   height: 60.0,
                 ),
