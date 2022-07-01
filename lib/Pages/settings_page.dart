@@ -5,6 +5,7 @@ class SettingsPage extends StatefulWidget {
 }
 
 class _SettingsPageState extends State<SettingsPage> {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -109,7 +110,13 @@ class _SettingsPageState extends State<SettingsPage> {
   }
 }
 
-class ProfilePage extends StatelessWidget {
+class ProfilePage extends StatefulWidget {
+  _ProfilePageState createState() => _ProfilePageState();
+}
+
+class _ProfilePageState extends State<ProfilePage> {
+  bool _isHidden = true;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -259,7 +266,51 @@ class ProfilePage extends StatelessWidget {
                     ),
                   ),
                 ),
+
                 Padding(
+                  padding: const EdgeInsets.all(15.0),
+                  child: TextField(
+                    obscureText: _isHidden,
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                    decoration: InputDecoration(
+                      filled: true,
+                      fillColor: Colors.black26,
+                      hintText: 'Enter new password',
+                      hintStyle: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10.0),
+                        borderSide: BorderSide(
+                          color: Colors.orange,
+                        ),
+                      ),
+                      prefixIcon: Icon(
+                        Icons.lock,
+                        color: Colors.orange,
+                      ),
+                      suffixIcon: IconButton(
+                        icon: Icon(
+                          _isHidden
+                              ? Icons.visibility
+                              : Icons.visibility_off,
+                          color: Colors.orange,
+                        ),
+                        onPressed: () {
+                          setState(() {
+                            _isHidden = !_isHidden;
+                          });
+                        },
+                      ),
+                    ),
+                  ),
+                  /*
                   padding: const EdgeInsets.all(15.0),
                   child: TextField(
                     style: TextStyle(
@@ -283,7 +334,9 @@ class ProfilePage extends StatelessWidget {
                       ),
                     ),
                   ),
+                  */
                 ),
+
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(primary: Colors.blueGrey[900]),
                   child: Text(
