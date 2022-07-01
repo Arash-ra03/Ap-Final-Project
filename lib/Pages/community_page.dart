@@ -208,7 +208,7 @@ class CommunityPage extends StatefulWidget {
 
 class _CommunityPageState extends State<CommunityPage> {
   List<String> list = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
-late bool select;
+late bool select=false;
   bool getBool(int num) {
     if (num % 2 == 0) {
       return true;
