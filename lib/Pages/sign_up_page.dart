@@ -1,8 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class SignUpPage extends StatelessWidget {
-  const SignUpPage({Key? key}) : super(key: key);
+class SignUpPage extends StatefulWidget {
+  @override
+  _SignUpPageState createState() => _SignUpPageState();
+}
+
+class _SignUpPageState extends State<SignUpPage> {
+  //const SignUpPage({Key? key}) : super(key: key);
+  bool _isHidden = true;
 
   @override
   Widget build(BuildContext context) {
@@ -97,6 +103,47 @@ class SignUpPage extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.all(15.0),
                   child: TextField(
+                    obscureText: _isHidden,
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                    decoration: InputDecoration(
+                      filled: true,
+                      fillColor: Colors.black26,
+                      hintText: 'Password',
+                      hintStyle: TextStyle(
+                        color: Colors.grey,
+                      ),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10.0),
+                        borderSide: BorderSide(
+                          color: Colors.orange,
+                        ),
+                      ),
+                      prefixIcon: Icon(
+                        Icons.lock,
+                        color: Colors.orange,
+                      ),
+                      suffixIcon: IconButton(
+                        icon: Icon(
+                          _isHidden
+                              ? Icons.visibility
+                              : Icons.visibility_off,
+                          color: Colors.orange,
+                        ),
+                        onPressed: () {
+                          setState(() {
+                            _isHidden = !_isHidden;
+                          });
+                        },
+                      ),
+                    ),
+                  ),
+                  /*
+                  child: TextField(
                     style: TextStyle(
                       color: Colors.white,
                     ),
@@ -123,7 +170,9 @@ class SignUpPage extends StatelessWidget {
                       ),
                     ),
                   ),
+                  */
                 ),
+
                 SizedBox(
                   height: 20.0,
                 ),
@@ -141,7 +190,6 @@ class SignUpPage extends StatelessWidget {
                     Navigator.pushNamed(context, '/mainpage');
                   },
                 ),
-
               ],
             ),
           ),
