@@ -369,7 +369,20 @@ class CreateCommunityPage extends StatefulWidget {
 
 class _CreateCommunityPageState extends State<CreateCommunityPage> {
   String dropdownValue = 'One';
-
+late TextEditingController titleC;
+late TextEditingController descC;
+@override
+  void initState() {
+    titleC = TextEditingController();
+    descC = TextEditingController();
+    super.initState();
+  }
+  @override
+  void dispose() {
+    titleC.dispose();
+    descC.dispose();
+    super.dispose();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -396,7 +409,28 @@ class _CreateCommunityPageState extends State<CreateCommunityPage> {
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(primary: Colors.white),
                   onPressed: () {
-                    Navigator.pushNamed(context, '/mainpage');
+                    if(titleC.text.isEmpty || descC.text.isEmpty){
+                      showDialog(
+                          context: context,
+                          builder: (BuildContext context) {
+                            return AlertDialog(
+                              title: Text('Error'),
+                              content: Text('Please fill all the fields'),
+                              actions: <Widget>[
+                                FlatButton(
+                                  child: Text('OK'),
+                                  onPressed: () {
+                                    Navigator.pop(context);
+                                  },
+                                ),
+                              ],
+                            );
+                          });
+                    }
+                    else{
+                      Navigator.pushNamed(context, '/mainpage');
+                    }
+
                   },
                   child: Text(
                     'Create',
