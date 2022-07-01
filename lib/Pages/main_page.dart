@@ -29,7 +29,7 @@ class _MainPageState extends State<MainPage> {
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         backgroundColor: Colors.black,
-        selectedItemColor: Colors.lightGreen,
+        selectedItemColor: Colors.orange,
         unselectedItemColor: Colors.white,
         showUnselectedLabels: false,
         showSelectedLabels: false,
