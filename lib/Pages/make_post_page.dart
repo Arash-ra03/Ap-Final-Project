@@ -10,10 +10,19 @@ class MakePost extends StatefulWidget {
 
 class _MakePostState extends State<MakePost> {
   String dropdownValue = 'One';
+  late TextEditingController titleC;
+  late TextEditingController descC;
 
+  @override
+  void initState() {
+    titleC= TextEditingController();
+    descC= TextEditingController();
+    super.initState();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
         backgroundColor: Colors.grey[800],
         body: SafeArea(
           child: Column(children: <Widget>[
@@ -32,7 +41,28 @@ class _MakePostState extends State<MakePost> {
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(primary: Colors.white),
                   onPressed: () {
-                    Navigator.pushNamed(context, '/mainpage');
+                    if(titleC.text.isEmpty || descC.text.isEmpty){
+                      showDialog(
+                        context: context,
+                        builder: (BuildContext context) {
+                          return AlertDialog(
+                            title: Text('Error'),
+                            content: Text('Please fill in all fields'),
+                            actions: <Widget>[
+                              FlatButton(
+                                child: Text('OK'),
+                                onPressed: () {
+                                  Navigator.of(context).pop();
+                                },
+                              )
+                            ],
+                          );
+                        },
+                      );
+                    }
+                    else{
+                      Navigator.pushNamed(context, '/mainpage');
+                    }
                   },
                   child: Text(
                     'Next',
@@ -76,6 +106,7 @@ class _MakePostState extends State<MakePost> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: TextField(
+                controller: titleC,
                 style: TextStyle(
                   color: Colors.white,
                 ),
@@ -112,6 +143,7 @@ class _MakePostState extends State<MakePost> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: TextField(
+                controller: descC,
                 maxLines: 8,
                 style: TextStyle(
                   color: Colors.white,
